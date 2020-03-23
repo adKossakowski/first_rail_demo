@@ -1,4 +1,4 @@
-<h1>Portfolio Items</h1>
+<h1>Angular portfolio Items</h1>
 
 <%= link_to  "Create new Portfolio", new_portfolio_path %>
 
@@ -6,7 +6,7 @@
   <p><%= link_to item.title, portfolio_show_path(item.id) %></p>
   <p><%= item.subtitle %></p>
   <p><%= item.body %></p>
-<!--  <p><%#= image_tag item.main_image rescue nil%></p>-->
+  <!--  <p><%#= image_tag item.main_image rescue nil%></p>-->
   <p><%= image_tag item.thumb_image rescue nil%></p>
 
   <%= link_to  "Edit", edit_portfolio_path(item.id) %>
@@ -14,4 +14,3 @@
   <%= link_to "Delete", portfolio_path(item.id), method: :delete, data: { confirm: "Are you sure?" } %>
 
 <% end %>
-
