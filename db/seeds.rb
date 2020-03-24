@@ -68,4 +68,13 @@ Portfolio.create!(
 
 puts "9 Portfolio created"
 
+3.times do |technology|
+  Technology.create!(
+      name: "Technology #{technology}",
+      portfolio_id: Portfolio.find(technology + 1).id
+  )
+end
+
+puts "3 Technology created"
+
 
